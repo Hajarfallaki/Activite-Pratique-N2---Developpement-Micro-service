@@ -1,7 +1,11 @@
 package org.sid.bank_account_service.web;
 
+import org.sid.bank_account_service.Mappers.AccountMapper;
+import org.sid.bank_account_service.dto.BankAccountDTO;
+import org.sid.bank_account_service.dto.BankAccountResponseDTO;
 import org.sid.bank_account_service.entities.BankAccount;
 import org.sid.bank_account_service.repositories.BankAccountRepository;
+import org.sid.bank_account_service.service.AccountService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
@@ -15,9 +19,13 @@ import java.util.List;
 public class AccountRestController {
 
     private final BankAccountRepository bankAccountRepository;
+    private final AccountService accountService;
+    private  AccountMapper accountMapper;
 
-    public AccountRestController(BankAccountRepository bankAccountRepository) {
+    public AccountRestController(BankAccountRepository bankAccountRepository,
+                                 AccountService accountService) {
         this.bankAccountRepository = bankAccountRepository;
+        this.accountService = accountService;
     }
 
     // ------------------ GET all accounts ------------------
@@ -35,21 +43,19 @@ public class AccountRestController {
                 ));
     }
 
-    // ------------------ CREATE (POST) ------------------
+    // ------------------ CREATE (POST) - Utilise DTO ------------------
     @PostMapping("/bankAccount")
-    public ResponseEntity<BankAccount> createAccount(@RequestBody BankAccount bankAccount) {
-        if (bankAccount.getCreatedAt() == null) {
-            bankAccount.setCreatedAt(new Date());
-        }
-        BankAccount saved = bankAccountRepository.save(bankAccount);
+    public ResponseEntity<BankAccountResponseDTO> createAccount(@RequestBody BankAccountDTO bankAccountDTO) {
+        // Appel au service qui gère la logique métier
+        BankAccountResponseDTO savedAccount = accountService.addAccount(bankAccountDTO);
 
         // Construire l'URI de la ressource créée : /api/bankAccount/{id}
         URI location = ServletUriComponentsBuilder.fromCurrentRequest()
                 .path("/{id}")
-                .buildAndExpand(saved.getId())
+                .buildAndExpand(savedAccount.getId())
                 .toUri();
 
-        return ResponseEntity.created(location).body(saved);
+        return ResponseEntity.created(location).body(savedAccount);
     }
 
     // ------------------ UPDATE (PUT) ------------------
