@@ -248,16 +248,23 @@ http://localhost:8085/h2-console
 ## 📸 Screenshots
 
 ### 1. Swagger UI
-_TODO: Ajouter une capture d'écran de Swagger UI_
+<img width="1894" height="1013" alt="Capture d&#39;écran 2025-11-16 220737" src="https://github.com/user-attachments/assets/ef26159a-77b2-487c-a029-330a2f2d9854" />
+<img width="1332" height="338" alt="Capture d&#39;écran 2025-11-16 215216" src="https://github.com/user-attachments/assets/9ab71763-719b-4506-9476-0e6e6f2ff277" />
+
 
 ### 2. Test avec Postman
-_TODO: Ajouter une capture d'écran de Postman_
+<img width="1684" height="1008" alt="Capture d&#39;écran 2025-11-16 212255" src="https://github.com/user-attachments/assets/250541f0-3d55-4fdb-9216-28cd93e51ffd" />
 
 ### 3. Console H2
-_TODO: Ajouter une capture d'écran de la console H2_
+<img width="890" height="716" alt="Capture d&#39;écran 2025-11-16 171400" src="https://github.com/user-attachments/assets/8cc77b3e-52a4-47ec-bf61-55eaa637d520" />
+<img width="1538" height="910" alt="Capture d&#39;écran 2025-11-16 171456" src="https://github.com/user-attachments/assets/91a572aa-d830-4bba-84de-32f9972954c5" />
+<img width="1557" height="934" alt="Capture d&#39;écran 2025-11-16 194518" src="https://github.com/user-attachments/assets/e15419f5-3cad-4aaa-9115-afb2b45481e1" />
+
 
 ### 4. Résultats des tests
-_TODO: Ajouter les captures d'écran des résultats_
+<img width="1857" height="972" alt="Capture d&#39;écran 2025-11-17 002017" src="https://github.com/user-attachments/assets/7e43d4ee-6380-431e-8d0f-192c4f12994b" />
+<img width="1404" height="825" alt="Capture d&#39;écran 2025-11-17 002023" src="https://github.com/user-attachments/assets/361cc735-d857-4b31-8e65-f7aea342b362" />
+
 
 ---
 
@@ -278,7 +285,7 @@ _TODO: Ajouter les captures d'écran des résultats_
 
 Modifier dans `application.properties` :
 ```properties
-server.port=8080
+server.port=8085
 ```
 
 ### Utiliser une base de données persistante
@@ -303,6 +310,7 @@ spring.datasource.url=jdbc:h2:file:./data/account-db;AUTO_SERVER=TRUE
 Ce projet est sous licence MIT.
 
 ---
+
 
 
 
