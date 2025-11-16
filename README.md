@@ -34,4 +34,9 @@ Le projet reprend la démarche de cette vidéo : [Créer un microservice de gest
 ---
 
 ## 📁 Structure du projet
+<img width="587" height="919" alt="image" src="https://github.com/user-attachments/assets/a33122c6-6822-4acc-a6e2-13e7bbb71e8a" />
+
+---
+
+
 
