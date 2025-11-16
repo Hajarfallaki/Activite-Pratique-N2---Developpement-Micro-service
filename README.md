@@ -37,6 +37,36 @@ Le projet reprend la démarche de cette vidéo : [Créer un microservice de gest
 <img width="587" height="919" alt="image" src="https://github.com/user-attachments/assets/a33122c6-6822-4acc-a6e2-13e7bbb71e8a" />
 
 ---
+## 🚀 Démarrage du projet
 
+1. **Cloner le projet** :  
+```bash
+git clone https://github.com/Hajarfallaki/Activite-Pratique-N2---Developpement-Micro-service.git
+cd bank-account-service ```
+
+---
+
+## **Lancer l’application** :
+```bash
+mvn spring-boot:run
+
+---
+
+## **Tester l’API REST avec Postman**:
+
+<img width="850" height="317" alt="image" src="https://github.com/user-attachments/assets/7e3d32b5-14c8-4412-9f2b-c67a986775a1" />
+
+---
+
+## **Swagger UI ** :
+Ouvre ton navigateur :
+```bash
+http://localhost:8080/swagger-ui/index.html
+
+Pour visualiser et tester toutes les API.
+
+---
+
+## **Screenshots** :
 
 
