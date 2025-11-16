@@ -5,7 +5,7 @@
 **Auteur : Hajar Elfallaki-Idrissi**  
 **Projet : Activité Pratique N2 – Développement Microservice**  
 **Description :** Ce projet est un microservice développé avec **Spring Boot** permettant de gérer des comptes bancaires.  
-Le projet reprend la démarche de cette vidéo : [Créer un microservice de gestion des comptes bancaires](https://www.youtube.com/watch?v=2-qIoZcvhAw).
+
 
 ---
 
@@ -303,6 +303,7 @@ spring.datasource.url=jdbc:h2:file:./data/account-db;AUTO_SERVER=TRUE
 Ce projet est sous licence MIT.
 
 ---
+
 
 
 
